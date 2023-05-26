@@ -71,3 +71,24 @@ input{
     font-weight: bold;
     color: #00C0EA;
 }
+
+
+@media (max-width: 768px) {
+    body {
+        background-image: url(./img/section1.png);
+    }
+    
+    .validation {
+      width: 80%;
+      height: auto;
+    }
+    
+    form {
+      width: 100%;
+      height: 300px;
+    }
+    
+    input {
+      width: 100%;
+    }
+  }

@@ -63,7 +63,6 @@ footer{
 }
 
 
-
 /*STYLE FORMS*/
 .forms{
     display: grid;
@@ -121,3 +120,32 @@ button{
     font-weight: bold;
     color: w;
 }
+
+
+@media (max-width: 600px) {
+    body {
+      grid-template-rows: 80px 1fr 80px;
+    }
+  
+    main {
+      padding: 0 10px;
+    }
+  
+    .validation {
+      width: 100%;
+    }
+  
+    .card-produtos,
+    .card-projetos {
+      width: 100%;
+      height: auto;
+    }
+  
+    .title {
+      font-size: 24px;
+    }
+  
+    .descricao input {
+      height: 150px;
+    }
+  }
