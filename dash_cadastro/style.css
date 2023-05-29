@@ -124,11 +124,14 @@ input{
 button{
     width: 100px;
     height: 30px;
-    background-color: #00C0EA;
-    border: none;
+    border: 1PX solid #00C0EA;
     border-radius: 10px;
     font-weight: bold;
-   cursor: pointer;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:#00C0EA
 }
 
 
