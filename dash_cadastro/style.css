@@ -6,34 +6,18 @@
 }
 
 /*BASICS*/
-body{
-    display: grid;
-    grid-template-rows: 100px 1fr 100px;
-    height: 100vh;
-}
+
 
 main{
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header{
-    background-image: url(./img/Frame.png);
-    background-repeat: no-repeat;
-}
-
-footer{
-    background-image: url(./img/Frame.png);
-    transform: rotate(180deg);
-    background-repeat: no-repeat;
+    flex-direction: column;
 }
 
 
 /*CARDS*/
 .validation{
     display: flex;
-    width:90%;
+    width:100%;
     height: 100%;
     justify-content: center;
     gap: 30px;
@@ -41,8 +25,33 @@ footer{
     font-weight: 900;
 }
 
+.actions{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #00C0EA;
+}
+
+.container{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttons{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 30px;
+    color: #00C0EA;
+}
+
 .card-produtos,
-.card-noticias,
 .card-projetos {
     background-color: #F5F5F5;
     width: 500px;
@@ -53,13 +62,14 @@ footer{
     flex-direction: column;
     padding: 20px;
     border-radius: 10px;
-    border: 3px solid #00C0EA;
+    border: 1px solid #00C0EA;
 }
 
 .title{
-    text-align: center;
-    font-size: 30px;
-    color: #00C0EA;
+    text-align: start;
+    font-size: 20px;
+    width: 100px;
+    border-bottom: 3px solid #00C0EA;
 }
 
 
@@ -118,7 +128,7 @@ button{
     border: none;
     border-radius: 10px;
     font-weight: bold;
-    color: w;
+   cursor: pointer;
 }
 
 
