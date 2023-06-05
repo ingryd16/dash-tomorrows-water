@@ -21,13 +21,13 @@ const cardProjeto = (dados) => {
     description.classList.add('card__biography')
     description.textContent = dados.descricao;
 
-    text_container.append(name /* description */)
+    text_container.append(name, description)
 
     const img = document.createElement('img')
     img.classList.add('card__img')
     img.src = dados.imagem;
 
-    card.append(img, text_container, description)
+    card.append(text_container, img)
 
     return card
 }
@@ -39,4 +39,4 @@ export const carregarProjeto = async () => {
     container.append(...cards)
 }
 
-cardProjeto()
+carregarProjeto()
