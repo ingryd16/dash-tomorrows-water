@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;400;500;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;400;500;800&display=swap"rel="stylesheet">
+    <!-- <script src="../post.js" defer type="module"></script> -->
+    <script src="../projeto.js" defer type="module"></script>
 </head>
 
 <body>
@@ -78,7 +79,7 @@
                 </div>
 
                 <div class="btn">
-                    <button>Enviar</button>
+                    <button id="submit-button">Enviar</button>
                 </div>
                 </div>
 
@@ -90,12 +91,12 @@
                             <div>
                                 <span>Nome:</span>
                             </div>
-                            <input type="text" placeholder="Nome" class="input-linha">
+                            <input id="input-nome-projeto" type="text" placeholder="Nome" class="input-linha">
                         </div>
                     </div>
 
-                    <div class="row-1">
-                        <div class="medidas">
+                    <!-- <div class="row-1"> -->
+                        <!-- <div class="medidas">
                             <div>
                                 <span>Data:</span>
                             </div>
@@ -103,15 +104,15 @@
                                 <input type="text" placeholder="Início: aaaa/mm/dd" class="input-linha">
                                 <input type="text" placeholder="Término: aaaa/mm/dd" class="input-linha">
                             </div>
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div> -->
 
                     <div class="row-1">
                         <div class="nome">
                             <div>
                                 <span>Imagem:</span>
                             </div>
-                            <input type="text" placeholder="Imagem" class="input-linha">
+                            <input id="input-imagem-projeto"type="text" placeholder="Imagem" class="input-linha">
                         </div>
                     </div>
 
@@ -120,12 +121,12 @@
                             <div>
                                 <span>Descrição:</span>
                             </div>
-                            <input type="text" class="input-linha">
+                            <input id="input-descricao-projeto" type="text" class="input-linha">
                         </div>
                     </div>
                 </div>
                 <div class="btn">
-                    <button>Enviar</button>
+                    <button id="submit-button-projeto">Enviar</button>
                 </div>
                 </div>
             </div>
@@ -136,7 +137,9 @@
                 Consultar: 
             </div>
             <div class="buttons-area">
-                <button>Produto</button>
+                <button>
+                    <a href="../pages/produto.html">Produto</a>
+                </button>
                 <button>Projeto</button>
                 <button>Doador</button>
                 <button>Patrocinador</button>

@@ -1,11 +1,12 @@
 async function createProduto(produto) {
+    console.log(produto)
     const url = 'http://localhost:8080/v1/tomorrows-water/produto';
     const options = {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(produto)
+        body: JSON.stringify(produto)   
     };
 
     try {
@@ -33,13 +34,13 @@ const button = document.getElementById('submit-button');
 
 button.addEventListener("click", (e) => {
     e.preventDefault();
-    checkInputs();
+    // checkInputs();
 
     const produto = {
-        "id": "",
+        "id": "",   
         "nome": nome.value,
         "descricao": descricao.value,
-        "cor": cor.value,
+        "cor": cor.value,   
         "preco": preco.value,
         "imagem": imagem.value,
         "altura": altura.value,
