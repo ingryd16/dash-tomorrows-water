@@ -18,7 +18,7 @@ const cardProjeto = (dados) => {
     name.textContent = dados.nome;
 
     const description = document.createElement('p')
-    description.classList.add('card__biography')
+    description.classList.add('card__description')
     description.textContent = dados.descricao;
 
     text_container.append(name, description)

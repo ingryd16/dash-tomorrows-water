@@ -9,8 +9,7 @@ export const produtos = async () => {
     console.log(produtos)
     return {
         ...data
-    }
-    
+    } 
 }
 
 export const projetos = async () => {
@@ -23,5 +22,52 @@ export const projetos = async () => {
     return {
         ...data
     }
-    
+}
+
+export const patrocinadores = async () => {
+   
+    const url = `http://localhost:8080/v1/tomorrows-water/patrocinador`
+    const response = await fetch(url)
+    const data = await response.json()
+    const { patrocinadores } = data;
+    console.log(patrocinadores)
+    return {
+        ...data
+    }   
+}
+
+export const voluntarios = async () => {
+   
+    const url = `http://localhost:8080/v1/tomorrows-water/voluntario`
+    const response = await fetch(url)
+    const data = await response.json()
+    const { voluntarios } = data;
+    console.log(voluntarios)
+    return {
+        ...data
+    }   
+}
+
+export const recados = async () => {
+   
+    const url = `http://localhost:8080/v1/tomorrows-water/recado`
+    const response = await fetch(url)
+    const data = await response.json()
+    const { recados } = data;
+    console.log(recados)
+    return {
+        ...data
+    }   
+}
+
+export const doacoes = async () => {
+   
+    const url = `http://localhost:8080/v1/tomorrows-water/doacao`
+    const response = await fetch(url)
+    const data = await response.json()
+    const { doacoes } = data;
+    console.log(doacoes)
+    return {
+        ...data
+    }   
 }
