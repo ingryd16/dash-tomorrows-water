@@ -36,7 +36,7 @@ function checkEmail(email) {
 function checkInputs() {
 
     if (email.value === "") {
-        setErrorFor(email, "O e-mail é obrigatória!");
+        setErrorFor(email, "O e-mail é obrigatório!");
     } else if (!checkEmail(email.value)) {
         setErrorFor(email, "Por favor, insira um email válido!");
     } else {
