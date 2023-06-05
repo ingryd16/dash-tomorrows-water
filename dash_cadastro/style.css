@@ -12,7 +12,15 @@ main{
     display: flex;
     flex-direction: column;
 }
-
+.arrow{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px;
+}
+.arrow-home{
+    display: flex;
+    padding: 20px;
+}
 
 /*CARDS*/
 .validation{
