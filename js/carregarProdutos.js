@@ -1,7 +1,6 @@
 'use strict'
 
 import { produtos } from "./api.js";
-// import { produtos } from "./api.js";
 let dados = await produtos();
 console.log(dados)
 
