@@ -1,10 +1,10 @@
 'use strict'
 
-import { doacoes } from "./api.js";
-let dados = await doacoes();
+import { voluntarios } from "./api.js";
+let dados = await voluntarios();
 console.log(dados)
 
-const cardDoacao = (dados) => {
+const cardVoluntario = (dados) => {
 
     const card = document.createElement('div')
     card.classList.add('card')
@@ -15,7 +15,7 @@ const cardDoacao = (dados) => {
 
     const name = document.createElement('h2')
     name.classList.add('card__name')
-    name.textContent = dados.nome_doador;
+    name.textContent = dados.nome;
 
     const email = document.createElement('h2')
     email.classList.add('card__email')
@@ -25,30 +25,32 @@ const cardDoacao = (dados) => {
     cpf.classList.add('card__cpf')
     cpf.textContent = dados.cpf;
 
-    const tipo = document.createElement('p')
-    tipo.classList.add('card__tipo')
-    tipo.textContent = dados.tipo_doacao;
+    const genero = document.createElement('p')
+    genero.classList.add('card__genero')
+    genero.textContent = dados.genero;
 
-    const valor = document.createElement('p')
-    valor.classList.add('card__valor')
-    valor.textContent = dados.valor;
+    const data = document.createElement('p')
+    data.classList.add('card__data')
+    data.textContent = dados.data_nascimento;
 
-    text_container.append(name, email, cpf, tipo, valor)
+    const telefone = document.createElement('p')
+    telefone.classList.add('card__telefone')
+    telefone.textContent = dados.numero;
 
-    const img = document.createElement('img')
-    img.classList.add('card__img')
-    img.src = dados.imagem;
 
-    card.append(text_container, img)
+    text_container.append(name, email, cpf, genero, data, telefone)
+
+
+    card.append(text_container)
 
     return card
 }
 
-export const carregarDoacao = async () => {
+export const carregarVoluntario = async () => {
 
     const container = document.getElementById('container-collections')
-    const cards = dados.doacoes.map(cardDoacao)
+    const cards = dados.voluntarios.telefones.map(cardVoluntario)
     container.append(...cards)
 }
 
-carregarDoacao()
+carregarVoluntario()
