@@ -72,6 +72,10 @@ input{
     color: #00C0EA;
 }
 
+.error-message{
+    color: red;
+}
+
 
 @media (max-width: 768px) {
     body {
