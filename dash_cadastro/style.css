@@ -62,9 +62,22 @@ main{
 .card-produtos,
 .card-projetos {
     background-color: #F5F5F5;
-    width: 500px;
+    width: 450px;
     height: 650px;
     align-self: center;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #00C0EA;
+}
+
+.card-adm {
+    background-color: #F5F5F5;
+    width: 450px;
+    height: 350px;
+    align-self: flex-start;
     gap: 20px;
     display: flex;
     flex-direction: column;
@@ -99,7 +112,7 @@ main{
 
 .nome,
 .preco {
-    width: 30%;
+    width: 100%;
 }
 
 .inputs-medidas{

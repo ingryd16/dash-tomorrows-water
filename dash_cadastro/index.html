@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/b94100b9f6.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;400;500;800&display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;400;500;800&display=swap"
+        rel="stylesheet">
     <!-- <script src="../post.js" defer type="module"></script> -->
     <script src="../projeto.js" defer type="module"></script>
 </head>
@@ -25,92 +26,20 @@
         <div class="container">
             <div class="actions">Cadastrar:</div>
             <div class="validation">
-                <div class="card-produtos">
-                <div class="title"> Produto </div>
-                
-                <div class="forms">
-
-                    <div class="row-1">
-                        <div class="nome">
-                            <div>
-                                <span>Nome:</span>
-                            </div>
-                            <input type="text" placeholder="Nome" class="input-linha" id="input-nome">
-                        </div>
-
-                        <div class="preco">
-                            <div>
-                                <span>Preço:</span>
-                            </div>
-                            <input type="text" placeholder="Preço" class="input-linha" id="input-preco">
-                        </div>
-
-                        <div class="categoria">
-                            <div>
-                                <span>Categoria:</span>
-                            </div>
-                            <input type="text" placeholder="Categoria" class="input-linha" id="input-categoria">
-                        </div>
-                    </div>
-
-                    <div class="row-1">
-                        <div class="medidas">
-                            <div>
-                                <span>Medidas:</span>
-                            </div>
-                            <div class="inputs-medidas">
-                                <input type="number" placeholder="Altura" class="input-linha" id="input-altura">
-                                <input type="number" placeholder="Largura" class="input-linha" id="input-largura">
-                                <input type="text" placeholder="Tamanho" class="input-linha" id="input-tamanho">
-                            </div>
-                        </div>
-
-                        <div class="cor">
-                            <div>
-                                <span>Cor:</span>
-                            </div>
-                            <input type="text" placeholder="Cor" class="input-linha" id="input-cor">
-                        </div>
-                    </div>
-
-                    <div class="row-1">
-                        <div class="descricao">
-                            <div>
-                                <span>Descrição:</span>
-                            </div>
-                            <input type="text" class="input-linha" id="input-descricao">
-                        </div>
-                    </div>
-
-                    <div class="row-1">
-                        <div class="imagem">
-                            <div>
-                                <span>Imagem:</span>
-                            </div>
-                            <input type="text" placeholder="Imagem" class="input-linha" id="input-imagem">
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="btn">
-                    <button id="submit-button">Enviar</button>
-                </div>
-                </div>
 
                 <div class="card-projetos">
-                <div class="title"> Projeto</div>
-                <div class="forms">
-                    <div class="row-1">
-                        <div class="nome">
-                            <div>
-                                <span>Nome:</span>
+                    <div class="title"> Projeto</div>
+                    <div class="forms">
+                        <div class="row-1">
+                            <div class="nome">
+                                <div>
+                                    <span>Nome:</span>
+                                </div>
+                                <input id="input-nome-projeto" type="text" placeholder="Nome" class="input-linha">
                             </div>
-                            <input id="input-nome-projeto" type="text" placeholder="Nome" class="input-linha">
                         </div>
-                    </div>
 
-                    <!-- <div class="row-1"> -->
+                        <!-- <div class="row-1"> -->
                         <!-- <div class="medidas">
                             <div>
                                 <span>Data:</span>
@@ -120,36 +49,146 @@
                                 <input type="text" placeholder="Término: aaaa/mm/dd" class="input-linha">
                             </div>
                         </div> -->
-                    <!-- </div> -->
+                        <!-- </div> -->
 
-                    <div class="row-1">
-                        <div class="nome">
-                            <div>
-                                <span>Imagem:</span>
+                        <div class="row-1">
+                            <div class="nome">
+                                <div>
+                                    <span>Imagem:</span>
+                                </div>
+                                <input id="input-imagem-projeto" type="text" placeholder="Imagem" class="input-linha">
                             </div>
-                            <input id="input-imagem-projeto"type="text" placeholder="Imagem" class="input-linha">
+                        </div>
+
+                        <div class="row-1">
+                            <div class="descricao">
+                                <div>
+                                    <span>Descrição:</span>
+                                </div>
+                                <input id="input-descricao-projeto" type="text" class="input-linha">
+                            </div>
                         </div>
                     </div>
-
-                    <div class="row-1">
-                        <div class="descricao">
-                            <div>
-                                <span>Descrição:</span>
-                            </div>
-                            <input id="input-descricao-projeto" type="text" class="input-linha">
-                        </div>
+                    <div class="btn">
+                        <button id="submit-button-projeto">Enviar</button>
                     </div>
                 </div>
-                <div class="btn">
-                    <button id="submit-button-projeto">Enviar</button>
+
+                <div class="card-adm">
+                    <div class="title"> Administrador</div>
+                    <div class="forms">
+                        <div class="row-1">
+                            <div class="nome">
+                                <div>
+                                    <span>Nome:</span>
+                                </div>
+                                <input id="input-nome-adm" type="text" placeholder="Nome" class="input-linha">
+                            </div>
+                        </div>
+
+                        <div class="row-1">
+                            <div class="nome">
+                                <div>
+                                    <span>Email:</span>
+                                </div>
+                                <input id="input-email-adm" type="text" placeholder="Email" class="input-linha">
+                            </div>
+                        </div>
+
+                        <div class="row-1">
+                            <div class="nome">
+                                <div>
+                                    <span>Senha:</span>
+                                </div>
+                                <input id="input-senha-adm" type="text" class="input-linha">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="btn">
+                        <button id="submit-button-projeto">Enviar</button>
+                    </div>
                 </div>
+
+                <div class="card-produtos">
+                    <div class="title"> Produto </div>
+
+                    <div class="forms">
+
+                        <div class="row-1">
+                            <div class="nome">
+                                <div>
+                                    <span>Nome:</span>
+                                </div>
+                                <input type="text" placeholder="Nome" class="input-linha" id="input-nome">
+                            </div>
+
+                            <div class="preco">
+                                <div>
+                                    <span>Preço:</span>
+                                </div>
+                                <input type="text" placeholder="Preço" class="input-linha" id="input-preco">
+                            </div>
+
+                            <div class="categoria">
+                                <div>
+                                    <span>Categoria:</span>
+                                </div>
+                                <input type="text" placeholder="Categoria" class="input-linha" id="input-categoria">
+                            </div>
+                        </div>
+
+                        <div class="row-1">
+                            <div class="medidas">
+                                <div>
+                                    <span>Medidas:</span>
+                                </div>
+                                <div class="inputs-medidas">
+                                    <input type="number" placeholder="Altura" class="input-linha" id="input-altura">
+                                    <input type="number" placeholder="Largura" class="input-linha" id="input-largura">
+                                    <input type="text" placeholder="Tamanho" class="input-linha" id="input-tamanho">
+                                </div>
+                            </div>
+
+                            <div class="cor">
+                                <div>
+                                    <span>Cor:</span>
+                                </div>
+                                <input type="text" placeholder="Cor" class="input-linha" id="input-cor">
+                            </div>
+                        </div>
+
+                        <div class="row-1">
+                            <div class="descricao">
+                                <div>
+                                    <span>Descrição:</span>
+                                </div>
+                                <input type="text" class="input-linha" id="input-descricao">
+                            </div>
+                        </div>
+
+                        <div class="row-1">
+                            <div class="imagem">
+                                <div>
+                                    <span>Imagem:</span>
+                                </div>
+                                <input type="text" placeholder="Imagem" class="input-linha" id="input-imagem">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="btn">
+                        <button id="submit-button">Enviar</button>
+                    </div>
                 </div>
+                
             </div>
         </div>
-        
+
         <div class="buttons">
             <div class="title-button">
-                Consultar: 
+                Consultar:
             </div>
             <div class="buttons-area">
                 <button>
