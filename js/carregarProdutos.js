@@ -16,19 +16,24 @@ const cardProduct = (dados) => {
 
     const name = document.createElement('h2')
     name.classList.add('card__name')
-    name.textContent = dados.nome;
+    name.textContent = "Nome do Produto: " + dados.nome;
 
     const description = document.createElement('p')
-    description.classList.add('card__biography')
-    description.textContent = dados.descricao;
+    description.classList.add('card__description')
+    description.textContent = "Descrição: " + dados.descricao;
 
-    text_container.append(name /* description */)
+    const preco = document.createElement('p')
+    preco.classList.add('card__preco')
+    preco.textContent = "Preço: R$" + dados.preco;
+
+
+    text_container.append(name, preco,  description)
 
     const img = document.createElement('img')
     img.classList.add('card__img')
-    img.src = dados.imagem;
+    img.src =  dados.imagem;
 
-    card.append(img, text_container)
+    card.append(text_container, img)
 
     return card
 

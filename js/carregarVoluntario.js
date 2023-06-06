@@ -4,7 +4,7 @@ import { voluntarios } from "./api.js";
 let dados = await voluntarios();
 console.log(dados)
 
-const cardVoluntario = (dados, telefones) => {
+const cardVoluntario = (dados) => {
 
     const card = document.createElement('div')
     card.classList.add('card')
@@ -15,27 +15,27 @@ const cardVoluntario = (dados, telefones) => {
 
     const name = document.createElement('h2')
     name.classList.add('card__name')
-    name.textContent = dados.nome;
+    name.textContent = "Nome do Voluntário: " + dados.nome;
 
-    const email = document.createElement('h2')
+    const email = document.createElement('p')
     email.classList.add('card__email')
-    email.textContent = dados.email;
+    email.textContent = "E-mail: " + dados.email;
 
     const cpf = document.createElement('p')
     cpf.classList.add('card__cpf')
-    cpf.textContent = dados.cpf;
+    cpf.textContent = "CPF: " + dados.cpf;
 
     const genero = document.createElement('p')
     genero.classList.add('card__genero')
-    genero.textContent = dados.genero;
+    genero.textContent = "Gênero: " + dados.genero;
 
     const data = document.createElement('p')
     data.classList.add('card__data')
-    data.textContent = dados.data_nascimento.replace("T00:00:00.000Z", "");
+    data.textContent = "Data de Nascimento: " + dados.data_nascimento.replace("T00:00:00.000Z", "");
 
     const telefone = document.createElement('p')
     telefone.classList.add('card__telefone')
-    telefone.textContent = telefones.numero;
+    telefone.textContent = "Telefone: " + dados.telefone;
 
 
     text_container.append(name, email, cpf, genero, data, telefone)
@@ -49,14 +49,10 @@ const cardVoluntario = (dados, telefones) => {
 export const carregarVoluntario = async () => {
 
     const container = document.getElementById('container-collections')
-    const dados = await voluntarios(); // Obtém os dados dos voluntários
+    const cards = dados.voluntarios.map(cardVoluntario)
+    container.append(...cards)
   
-    dados.voluntarios.forEach((voluntario) => {
-        voluntario.telefones.forEach((telefone) => {
-          const card = cardVoluntario(voluntario, telefone); // Chama a função cardVoluntario com o objeto completo do voluntário e o telefone
-          container.appendChild(card); // Adiciona o card ao container
-        });
-      });
+   
     }
 
 carregarVoluntario();

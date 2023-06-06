@@ -15,17 +15,17 @@ const cardRecado = (dados) => {
 
     const name = document.createElement('h2')
     name.classList.add('card__name')
-    name.textContent = dados.nome;
+    name.textContent = "Nome: " + dados.nome;
 
     const email = document.createElement('p')
     email.classList.add('card__email')
-    email.textContent = dados.email;
+    email.textContent = "E-mail: " + dados.email;
 
     text_container.append(name, email)
 
     const mensagem = document.createElement('p')
     mensagem.classList.add('card__mensagem')
-    mensagem.textContent = dados.mensagem;
+    mensagem.textContent = "Recado: " + dados.mensagem;
     
     card.append(text_container, mensagem)
 
