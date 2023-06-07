@@ -25,9 +25,11 @@ const form = document.querySelector(".forms");
 const nome = document.getElementById("input-nome");
 const cor = document.getElementById("input-cor");
 const preco = document.getElementById("input-preco");
+const descricao = document.getElementById("input-descricao");
 const altura = document.getElementById("input-altura");
 const largura = document.getElementById("input-largura");
-const descricao = document.getElementById("input-descricao");
+const tamanho = document.getElementById("input-tamanho");
+const categoria = document.getElementById("input-categoria");
 const imagem = document.getElementById("input-imagem");
 
 const button = document.getElementById('submit-button');
@@ -37,16 +39,16 @@ button.addEventListener("click", (e) => {
     // checkInputs();
 
     const produto = {
-        "id": "",   
-        "nome": nome.value,
+        "id": "",  
         "descricao": descricao.value,
+        "nome": nome.value,
         "cor": cor.value,   
         "preco": preco.value,
         "imagem": imagem.value,
         "altura": altura.value,
         "largura": largura.value,
-        /* "tamanho_sigla": message.value,
-        "categoria": message.value, */
+        "tamanho_sigla": tamanho.value,
+        "categoria": categoria.value
     };
 
     createProduto(produto);
