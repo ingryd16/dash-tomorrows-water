@@ -8,7 +8,7 @@
 ## Sobre:
 DashBoard do site [Tomorrow's Water](https://github.com/ingryd16/tommorrows_water).
 
-O objetivo deste projeto é colocar em prática os conhecimentos sobre desenvolvimento de sites, com programação web FrontEnd, BackEnd e Banco de Dados adquiridos no curso do [SENAI Jandira](https://jandira.sp.senai.br/)
+O objetivo deste projeto é colocar em prática os conhecimentos sobre desenvolvimento de sites, com programação web FrontEnd, BackEnd e Banco de Dados adquiridos no curso do [SENAI Jandira](https://jandira.sp.senai.br/).
 
 ---
 
