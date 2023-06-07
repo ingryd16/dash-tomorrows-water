@@ -1,0 +1,38 @@
+.card {
+    border: 2px solid #00C0EA;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.card__name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00C0EA;
+}
+
+.card__description {
+    margin-top: 10px;
+    color: #666;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.card__img {
+    max-width: 600px;
+    max-height: 400px;
+}
+
+.text_container{
+    max-width: 1200px;
+}
+
+.container-collections{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+    gap: 30px;
+}
