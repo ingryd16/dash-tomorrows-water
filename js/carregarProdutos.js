@@ -4,6 +4,9 @@ import { produtos } from "./api.js";
 let dados = await produtos();
 console.log(dados)
 
+import { excluirProduto } from "./api.js";
+
+
 const cardProduct = (dados) => {
 
     const card = document.createElement('div')
@@ -31,7 +34,16 @@ const cardProduct = (dados) => {
     img.classList.add('card__img')
     img.src =  dados.imagem;
 
-    card.append(text_container, img)
+    const button = document.createElement('button')
+    button.classList.add('card__button')
+    button.textContent = "Excluir";
+
+    button.addEventListener('click', () => {
+        excluirProduto(dados.id); // Chama a função para excluir o produto passando o ID como parâmetro
+        card.remove(); // Remove o card do DOM após a exclusão
+    });
+
+    card.append(text_container, img, button)
 
     return card
 

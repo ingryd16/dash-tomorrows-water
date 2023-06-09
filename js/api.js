@@ -12,6 +12,25 @@ export const produtos = async () => {
     } 
 }
 
+export const excluirProduto = async (produtoId) => {
+    const url = `http://localhost:8080/v1/tomorrows-water/produto/${produtoId}`;
+    const options = {
+        method: 'DELETE',
+    };
+
+    try {
+        const response = await fetch(url, options);
+        if (response.ok) {
+            console.log('Produto excluído com sucesso!');
+        } else {
+            console.error('Erro ao excluir o produto.');
+        }
+    } catch (error) {
+        console.error('Erro ao fazer a requisição DELETE:', error);
+    }
+};
+
+
 export const projetos = async () => {
    
     const url = `http://localhost:8080/v1/tomorrows-water/projeto`
