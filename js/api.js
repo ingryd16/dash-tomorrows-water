@@ -13,6 +13,12 @@ export const produtos = async () => {
 }
 
 export const excluirProduto = async (produtoId) => {
+    const confirmacao = window.confirm('Tem certeza que deseja excluir o produto?');
+
+    if (!confirmacao) {
+        return; // Se o usuário cancelar a exclusão, a função é interrompida
+    }
+
     const url = `http://localhost:8080/v1/tomorrows-water/produto/${produtoId}`;
     const options = {
         method: 'DELETE',
@@ -31,6 +37,7 @@ export const excluirProduto = async (produtoId) => {
 };
 
 
+
 export const projetos = async () => {
    
     const url = `http://localhost:8080/v1/tomorrows-water/projeto`
@@ -42,6 +49,30 @@ export const projetos = async () => {
         ...data
     }
 }
+
+export const excluirProjeto = async (projetoId) => {
+    const confirmacao = window.confirm('Tem certeza que deseja excluir o projeto?');
+
+    if (!confirmacao) {
+        return; // Se o usuário cancelar a exclusão, a função é interrompida
+    }
+
+    const url = `http://localhost:8080/v1/tomorrows-water/projeto/${projetoId}`;
+    const options = {
+        method: 'DELETE',
+    };
+
+    try {
+        const response = await fetch(url, options);
+        if (response.ok) {
+            console.log('Produto excluído com sucesso!');
+        } else {
+            console.error('Erro ao excluir o produto.');
+        }
+    } catch (error) {
+        console.error('Erro ao fazer a requisição DELETE:', error);
+    }
+};
 
 export const patrocinadores = async () => {
    

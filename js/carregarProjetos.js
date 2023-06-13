@@ -1,6 +1,6 @@
 'use strict'
 
-import { projetos } from "./api.js";
+import { excluirProjeto, projetos } from "./api.js";
 let dados = await projetos();
 console.log(dados)
 
@@ -21,14 +21,24 @@ const cardProjeto = (dados) => {
     description.classList.add('card__description')
     description.textContent = dados.descricao;
 
-    text_container.append(name, description)
+    const button = document.createElement('button')
+    button.classList.add('card__button')
+    button.textContent = "Excluir";
+
+    button.addEventListener('click', () => {
+        excluirProjeto(dados.id); // Chama a função para excluir o produto passando o ID como parâmetro
+        card.remove(); // Remove o card do DOM após a exclusão
+    });
+
+    text_container.append(name, description, button)
 
     const img = document.createElement('img')
     img.classList.add('card__img')
     img.src = dados.imagem;
 
-    card.append(text_container, img)
+    
 
+    card.append(text_container, img)
     return card
 }
 

@@ -37,6 +37,11 @@
     gap: 30px;
 }
 
+
+.card__button{
+    margin-top: 10px;
+}
+
 @media screen and (max-width: 600px) {
     .container-collections {
       padding: 10px 5px;
