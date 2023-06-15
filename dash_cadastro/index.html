@@ -22,15 +22,20 @@
             <a href="../dashboard/index.html">
                 <i class="fas fa-share-square fa-flip-horizontal" style="color: #00c0ea; font-size: 3rem;"></i>
             </a>
+        </div>
     </header>
+
     <main>
         <div class="container">
+
             <div class="actions">Cadastrar:</div>
+
             <div class="validation">
 
                 <div class="card-projetos">
                     <div class="title"> Projeto</div>
-                    <div class="forms">
+
+                    <div class="forms-projeto">
                         <div class="row-1">
                             <div class="nome">
                                 <div>
@@ -70,14 +75,19 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="btn">
+                        <div id="bottom-container-projeto">
+                        </div>
                         <button id="submit-button-projeto">Enviar</button>
                     </div>
                 </div>
 
                 <div class="card-adm">
                     <div class="title"> Administrador</div>
-                    <div class="forms">
+
+                    <div class="forms-adm">
+
                         <div class="row-1">
                             <div class="nome">
                                 <div>
@@ -101,12 +111,15 @@
                                 <div>
                                     <span>Senha:</span>
                                 </div>
-                                <input type="password" id="input-senha-adm" placeholder="Senha"class="input-linha">
+                                <input type="password" id="input-senha-adm" placeholder="Senha" class="input-linha">
                             </div>
                         </div>
 
                     </div>
+
                     <div class="btn">
+                        <div id="bottom-container">
+                        </div>
                         <button id="submit-button-adm">Enviar</button>
                     </div>
                 </div>
@@ -114,7 +127,7 @@
                 <div class="card-produtos">
                     <div class="title"> Produto </div>
 
-                    <div class="forms">
+                    <div class="forms-produto">
 
                         <div class="row-1">
                             <div class="nome">
@@ -180,11 +193,14 @@
                     </div>
 
                     <div class="btn">
-                        <button id="submit-button">Enviar</button>
+                        <div id="bottom-container-produto">
+                        </div>
+                        <button id="submit-button-produto">Enviar</button>
                     </div>
                 </div>
-                
+
             </div>
+
         </div>
 
         <div class="buttons">
@@ -218,6 +234,7 @@
             </div>
         </div>
     </main>
+
 </body>
 
 </html>

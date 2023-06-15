@@ -1,3 +1,16 @@
+function showSuccessMessage() {
+    const messageElement = document.createElement("div");
+    messageElement.textContent = "Projeto criado";
+    messageElement.classList.add("success-message");
+
+    const bottomContainer = document.getElementById("bottom-container-projeto");
+    bottomContainer.appendChild(messageElement);
+
+    setTimeout(() => {
+        bottomContainer.removeChild(messageElement);
+    }, 3000); // Remove a mensagem após 3 segundos
+}
+
 async function createProjeto(projeto) {
     console.log(projeto)
     const url = 'http://localhost:8080/v1/tomorrows-water/projeto';
@@ -13,6 +26,7 @@ async function createProjeto(projeto) {
         const response = await fetch(url, options);
         if (response.ok) {
             console.log('Dados enviados com sucesso para o servidor.');
+            showSuccessMessage()
         } else {
             console.log('Ocorreu um erro ao enviar os dados para o servidor.');
         }
@@ -21,7 +35,7 @@ async function createProjeto(projeto) {
     }
 }
 
-const form = document.querySelector(".forms");
+const form = document.querySelector(".forms-projeto");
 const nome = document.getElementById("input-nome-projeto");
 const descricao = document.getElementById("input-descricao-projeto");
 const imagem = document.getElementById("input-imagem-projeto");
